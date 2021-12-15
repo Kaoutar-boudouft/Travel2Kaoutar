@@ -122,7 +122,7 @@ padding: 15px;
     width: 75%;
 
 }
-@media screen and (max-width: 350px) {
+@media screen and (max-width: 523px) {
     .banner-text p,#btn{
       display: none;
     }
