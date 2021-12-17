@@ -1,0 +1,95 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-image: url(./im/pexels-photo-3889991.jpeg);
+    background-size: 100vw;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    
+}
+#nav{
+    background-color: rgb(0, 0, 0);
+}
+#u li{
+    padding-left: 25px;
+}
+#u li a{
+    color: white;
+    font-weight: bold;
+}
+#u li a:hover{
+    color: rgb(8, 190, 214);
+    text-transform: uppercase;
+}
+#h{background-color: rgb(0, 0, 0);
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    color: white;
+
+}
+#h:hover{
+    background-color: rgba(0, 0, 0, 0.76);
+    cursor: pointer;
+    color: white;
+}
+
+#h h5{
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+}
+#newyork{
+    background-image: url(./im/newy.jpg);
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+#prop{
+    font-size: 15px;
+    color: rgba(128, 128, 128, 0.829);
+    text-align: center;
+}
+#place{
+    color:rgb(0, 0, 0);
+    font-size:xx-large;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+}
+#cardbody{
+    background-color: rgb(5, 149, 168);
+    justify-content: center;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+#cardd h5:hover{
+    font-size: 30pt;
+}
+#cardd:hover{
+    filter:brightness(80%);
+}
+#cardd #cardbody input:hover{
+   width: 100px;
+}
+#x:hover{
+    filter: brightness(80%);
+}
+#foot ul{
+    list-style: none;
+}
+#foot p{
+    width: 50%;
+    padding-left: 20px;
+
+}
+@media screen and (max-width: 1300px){
+    body{
+        background-size: 2000px;
+    background-position: bottom;}
+}
+@media screen and (max-width: 600px )
+{
+    #banner p{
+        display: none;
+       }
+}

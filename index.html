@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./style.css">
+    <title>TravelAgency</title>
+    <link rel="stylesheet" href="./style copy.css">
     <link rel="stylesheet" href="./css/bootstrap.min.css" />
     <script src="./js/jquery-3.3.1.slim.min.js"></script>
     <script src="./js/popper.min.js"></script>
@@ -14,423 +14,763 @@
     <script src="./js/jquery-1.11.1.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="./js/script.js"></script>
-    <script>
-       $(window).scroll(function() {
-                if ($(this).scrollTop()>=500)
-                {
-                $('#prop').show(1500);
-                $('#place').show(1500);
-                $('#hr1').show(1500);
-                }
-                if ($(this).scrollTop()>=700)
-                {
-                $('#destination').show(1500);
-                }
-                if ($(this).scrollTop()>=700)
-                {
-                $('#destination2').show(1500);
-                }
-                if ($(this).scrollTop()>=1300)
-                {
-                $('#popular').show(1500);
-                }
-                if ($(this).scrollTop()>=2000)
-                {
-                $('#feed').show(1500);
-                $('#place').show(1500);
-                $('#hr1').show(1500);
-                }
-                if ($(this).scrollTop()>=2000)
-                {
-                $('#reservation').show(1500);
-                }
-                if ($(this).scrollTop()>=2700)
-                {
-                $('#formu').show(1500);
-                }
-                if ($(this).scrollTop()>=3600)
-                {
-                $('#brand').show(1500);
-                }
- });
-    </script>
 </head>
+
 <body>
-    <header id="Home">
-        <video src="./Morocco 8K HDR 60FPS (FUHD).mp4" class="vid-bg" autoplay loop muted></video>
-        <div class="nav-area">
-            <div class="container-fluide mx-auto w-100 " >
-                <div class="row w-100 mx-auto" style="background-color: rgb(255, 255, 255);z-index: 1;">
-                    <div id="logo" class="col-xs-12 col-sm-6 col-md-6 col-lg-4" align="center">
-                        <h2 style="font-family: Georgia, 'Times New Roman', Times, serif;cursor: pointer;">
-                            <strong>Travel Agency<span style="color:rgb(5, 149, 168);">.</span></strong></h2>
+    <nav class="navbar navbar-dark navbar-expand-lg  sticky-top w-100" id="nav">
+        <div class="container">
+            <div class="navbar-brand">
+                <div id="logo" class="col-xs-12 col-sm-6 col-md-6 col-lg-4" align="center">
+                    <h2 style="font-family: Georgia, 'Times New Roman', Times, serif;cursor: pointer;">
+                        <strong>Travel Agency<span style="color:rgb(5, 149, 168);">.</span></strong>
+                    </h2>
+                </div>
+            </div>
+            <!-- NE PAS TOUCHER (boutton en responsive : oui je suis gentil) -->
+            <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarText">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- LES LIENS -->
+            <div class="collapse navbar-collapse" id="navbarText">
+                <ul class="navbar-nav" style="padding-left:38%;" id="u">
+                    <li class="nav-item active">
+                        <a href="#Home" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#destination" class="nav-link">Tours</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#re" class="nav-link">Reserve</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#foot" class="nav-link">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#brand" class="nav-link">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="banner-text text-center" style="margin-top:200px;padding: 25px;width:50%;margin-left:25%;" id="banner">
+        <h2 style="font-family: Georgia, 'Times New Roman', Times, serif;cursor: pointer;font-size: 36pt;letter-spacing: 3px;"
+            class="text-white">
+            <strong style="color: black;">Travel Agency<span style="color:rgb(5, 149, 168);">.</span></strong>
+        </h2>
+        <br>
+        <p style="color: white;text-shadow: 0 0 1px black;color: black;">Practicing pleasure travel gives rise to the
+            satisfaction gained only by such experiences.<br> And satisfaction often leads to reducing tension and
+            anxiety.<br> The pleasure trip thus becomes even more important and primarily learned a form of reducing
+            stress and stopping anxiety.</p>
+        <br>
+        <div class="text-center">
+            <a href="#" class="btn"
+                style="padding: 12px;background-color: rgb(255, 255, 255);border-radius: 8px;color: rgb(0, 0, 0);font-weight: bold">Reserve
+                Now!</a>
+        </div>
+    </div>
+    <br>
+    <br>
+    <div style="background-color:white;box-shadow: 0 0 15px black;" class="p-5 m-5">
+        <h4 id="prop"> Our Propoals</h4>
+        <h2 id="place">Our Destination</h2>
+        <hr style="width: 300px;background-color: rgb(5, 149, 168);font-weight: bold;height: 5px;border:0;border-radius: 8px;"
+            id="hr1">
+        <br>
+        <!--LES CARDS 1----->
+        <div class="container mt-3" id="destination" style="display: none;">
+            <section>
+                <div class="card-deck">
+                    <div class="card text-white bg-secondary mb-3 text-center" id="cardd"
+                        style="border:0;border-radius:8px;box-shadow: 0 0 15px black;cursor: pointer;">
+                        <img src="./im/destination-8.jpg" class="card-img-top" alt="...">
+                        <div class="card-body" id="cardbody">
+                            <h5 class="card-title">Asia</h5>
+                            <p class="card-text">A destination that is full of mountains.</p>
+                            <input type="button" value="Reserve" data-toggle="modal" data-target="#r1"
+                                style="border:1px solid rgb(255, 255, 255);border-radius: 4px;background-color: rgb(5, 149, 168);padding: 5px;color: white;box-shadow: 0 0 6px rgb(255, 255, 255)">
+                        </div>
                     </div>
-                    <div class="col-xs-3 col-sm-6 col-md-6 col-lg-8 mx-auto p-1" style="text-align: right;"><button
-                            type="button" class="navbar-toggle" data-toggle="collapse" data-target="#menu-area" style="border: 1px solid black;background-color: white;">
-                            <i class="fa fa-bars"></i>
-                        </button></div>
+                    <div class="card text-white bg-secondary mb-3 text-center" id="cardd"
+                        style="border:0;border-radius:8px;box-shadow: 0 0 15px black;cursor: pointer;">
+                        <img src="./im/destination-9.jpg" class="card-img-top" alt="...">
+                        <div class="card-body" id="cardbody">
+                            <h5 class="card-title">Greece</h5>
+                            <p class="card-text">Where all the magic happens in Santorini.</p>
+                            <input type="button" value="Reserve" data-toggle="modal" data-target="#r2"
+                                style="border:1px solid rgb(255, 255, 255);border-radius: 4px;background-color: rgb(5, 149, 168);padding: 5px;color: white;box-shadow: 0 0 6px rgb(255, 255, 255)">
+                        </div>
+                    </div>
+                    <div class="card text-white bg-secondary mb-3 text-center" id="cardd"
+                        style="border:0;border-radius:8px;box-shadow: 0 0 15px black;cursor: pointer;">
+                        <img src="./im/destination-5-720x720.jpg" class="card-img-top" alt="...">
+                        <div class="card-body" id="cardbody">
+                            <h5 class="card-title">Bora Bora</h5>
+                            <p class="card-text">A place for you trired soul.</p>
+                            <input type="button" value="Reserve" data-toggle="modal" data-target="#r3"
+                                style="border:1px solid rgb(255, 255, 255);border-radius: 4px;background-color: rgb(5, 149, 168);padding: 5px;color: white;box-shadow: 0 0 6px rgb(255, 255, 255)">
+                        </div>
+                    </div>
+                </div>
+        </div>
+        </section>
+        <!--LES CARDES 2-->
+        <br>
+        <div class="container mt-3" style="display: none" id="destination2">
+            <section>
+                <div class="card-deck">
+                    <div class="card text-white bg-secondary mb-3 text-center" id="cardd"
+                        style="border:0;border-radius:8px;box-shadow: 0 0 15px black;cursor: pointer;">
+                        <img src="./im/th.jpg" class="card-img-top" alt="..." height="350px">
+                        <div class="card-body" id="cardbody">
+                            <h5 class="card-title">Barcelona</h5>
+                            <p class="card-text">Where all the magic happens in.</p>
+                            <input type="button" value="Reserve" data-toggle="modal" data-target="#r4"
+                                style="border:1px solid rgb(255, 255, 255);border-radius: 4px;background-color: rgb(5, 149, 168);padding: 5px;color: white;box-shadow: 0 0 6px rgb(255, 255, 255)">
+                        </div>
+                    </div>
+                    <div class="card text-white bg-secondary mb-3 text-center" id="cardd"
+                        style="border:0;border-radius:8px;box-shadow: 0 0 15px black;cursor: pointer;">
+                        <img src="./im/newzi.jpg" class="card-img-top" alt="...">
+                        <div class="card-body" id="cardbody">
+                            <h5 class="card-title">New Zeland</h5>
+                            <p class="card-text">Where all the magic happens in </p>
+                            <input type="button" value="Reserve" data-toggle="modal" data-target="#r5"
+                                style="border:1px solid rgb(255, 255, 255);border-radius: 4px;background-color: rgb(5, 149, 168);padding: 5px;color: white;box-shadow: 0 0 6px rgb(255, 255, 255)">
+                        </div>
+                    </div>
+                    <div class="card text-white bg-secondary mb-3 text-center" id="cardd"
+                        style="border:0;border-radius:8px;box-shadow: 0 0 15px black;cursor: pointer;">
+                        <img src="./im/tok.jpg" class="card-img-top" alt="...">
+                        <div class="card-body" id="cardbody">
+                            <h5 class="card-title">Tokyo</h5>
+                            <p class="card-text">Heaven in earth</p>
+                            <input type="button" value="Reserve" data-toggle="modal" data-target="#r6"
+                                style="border:1px solid rgb(255, 255, 255);border-radius: 4px;background-color: rgb(5, 149, 168);padding: 5px;color: white;box-shadow: 0 0 6px rgb(255, 255, 255)">
+                        </div>
+                    </div>
+                </div>
+        </div>
+        </section>
+    </div>
+    </div>
+    </div>
+    <!-----popular destination-->
+    <div class="container text-dark text-right" style="display: none;" id="popular">
+        <div class="row w-100">
+            <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12" ><img src="./im/sa.jpg" style="width: 100%;"></div>
+            <div class="col-md-5 col-lg-5 col-sm-12 col-xs-12 offset-lg-1 offset-md-1 p-2 text-white text-dark "
+                style="background-color: rgba(0, 0, 0, 0);">
+                <div class="text-left" >
+                    <h2>Our Popular Tours</h2>
+                    <hr style="width: 300px;background-color: rgb(5, 149, 168);font-weight: bold;height: 3px;border:0;border-radius: 8px;text-align: left;"
+                        align="left">
+                    <p style="font-size:x-large; font-family: 'Times New Roman', Times, serif;"> Africa</p>
+                    <div class="progress">
+                        <div class="progress-bar bg-info" style="width: 95%"></div>
+                    </div>
+                    <p style="font-size:x-large; font-family: 'Times New Roman', Times, serif;">Europe</p>
+                    <div class="progress">
+                        <div class="progress-bar bg-info" style="width: 88%"></div>
+                    </div>
+                    <p style="font-size:x-large; font-family: 'Times New Roman', Times, serif;">Asia</p>
+                    <div class="progress">
+                        <div class="progress-bar bg-info" style="width: 97%"></div>
+                    </div>
+                    <p style="font-size:x-large; font-family: 'Times New Roman', Times, serif;">America</p>
+                    <div class="progress">
+                        <div class="progress-bar bg-info" style="width: 90%"></div>
+                    </div>
                 </div>
             </div>
         </div>
-        <div id="menu" class="container-fluide" style="text-align: right;padding-top: 65px;margin-right: -10px;">
-            <div class="row">
-                <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10"></div>
-                <ul class="col-xs-10 col-sm-2 col-md-2 col-lg-2">
-                    <div class="collapse navbar-collapse" id="menu-area">
-                        <li><a href="#Home" >Home</a></li>
-                        <li><a href="#destination">Tours</a></li>
-                        <li><a href="#reservation">Reserve</a></li>
-                        <li><a href="#foot">Info</a></li>
+    </div>
+    <br>
+    <!-----end popular destination-->
+    <br>
+    <!--reservation-->
+    <div class="container-fluid" style="display: none;" id="re">
+        <div class="row w-100 p-4">
+          <div class="col-xs-11 col-sm-11 col-md-10 col-lg-10 bg-light offset-md-1 offset-lg-1 offset-sm-1 offset-xs-1" style="box-shadow: 0 0 15px black;">
+            <div class="container-fluide bg-light">
+              <div class="row bg-light">
+                <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5 bg-light p-4 mt-4 text-left offset-md-1 offset-lg-1" >
+                  <br>
+                  <br>
+                  <br>
+                  <h4 style="color: rgb(5, 149, 168);letter-spacing: 5px;font-weight: bold;">Enjoy With  Us</h4>
+                  <hr style="background-color: rgb(5, 149, 168);;height: 2px;border: 0;border-radius: 8px;width: 100px;" align="left">
+                  <br>
+                  <p>"As we know tourism is a people centric and one of the fastest growing industry. Assessing behavior and motivations of tourist is a critical task as travel decisions of tourist depends on it. Travel has been a nomadic urge in human earlier in quest of food. As humanity grows desire for shelter came into being and with the rises of civilization search of trade bundles with safety and security. The game changing moment for mass tourism comes with the rise of leisure time. Assessing motivations of tourist is a critical task as travel decisions of tourist depends on it.
+
+                    "</p>               
+                  <br>
+                  <div style="display: flex;justify-content: center;">
+                    <div class="text-center" style="padding-left: 6%;" >
+                      <img src="./im/icon-around.png" >
+                      <br>
+                      <h6 style="color: rgb(5, 149, 168);;font-weight: bold;">By Flight</h6>
                     </div>
-                </ul>
-            </div>
-            </div>           
-        </div>
-        <div class="banner-text">  
-            <h2>Travel Agency</h2>
-            <br>
-            <p >Your Destination To Paradise</p>
-            <br>
-            <div class="text-center" id="btn">
-            <a href="#" class="btn" style="padding: 12px;background-color: rgb(5, 149, 168);border-radius: 8px;color: white;font-weight: bold">Reserve Now!</a>
-          </div>
-          <br>
-         <br>
-          <div class="container" id="ca">
-            <div class="w-100 mx-auto text-center" >
-                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="2600">               
-                    <div class="carousel-inner w-100 h-75">
-                      <div class="carousel-item active w-100 h-50" >
-                        <img src="./im/destination-9.jpg"  style=" height: 300px;border-radius: 8px;width: 350px;" >
-                      </div>
-                      <div class="carousel-item w-100 h-50">
-                        <img src="./im/tok.jpg"  style="height: 300px;border-radius: 8px;width: 350px;" >
-                      </div>
-                      <div class="carousel-item w-100 h-50">
-                        <img src="./im/t.jpg"  style="height: 300px;border-radius: 8px;width: 350px;" >
-                      </div><div class="carousel-item w-100 h-50">
-                        <img src="./im/sato.jpg"  style="height: 300px;border-radius: 8px;width: 350px;" >
-                      </div><div class="carousel-item w-100 h-50">
-                        <img src="./im/sa.jpg"  style="height: 300px;border-radius: 8px;width: 350px;" >
-                      </div>                  
-                    </div>                   
+                    <div class="text-center" style="padding-left: 6%;">
+                      <img src="./im/icon-boat.png">
+                      <br>
+                      <h6 style="color: rgb(5, 149, 168);font-weight: bold;;">By Boats</h6>
+                    </div>
+                    <div class="text-center" style="padding-left: 6%;">
+                      <img src="./im/icon-landmark.png">
+                      <br>
+                      <h6 style="color: rgb(5, 149, 168);font-weight: bold;;">Monements</h6>
+                    </div>                      
                   </div>
-            </div>
-        </div>
-          </div>
-    </header>
-   <br>
-   <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-      <h4 id="prop" style="display: none;"> Our Propoals</h4>
-      <h2 id="place" style="display: none;">Our Destination</h2>
-      <hr style="display: none;width: 300px;background-color: rgb(5, 149, 168);font-weight: bold;height: 5px;border:0;border-radius: 8px;" id="hr1">
-      <br>
-    <!--LES CARDS 1----->
-    <div class="container mt-3" id="destination" style="display: none;">
-      <section>              
-          <div class="card-deck">          
-          <div class="card text-white bg-secondary mb-3 text-center" id="cardd" style="border:0;border-radius:8px;box-shadow: 0 0 15px black;cursor: pointer;" >
-            <img src="./im/destination-8.jpg" class="card-img-top" alt="..."  >
-            <div class="card-body" id="cardbody">
-              <h5 class="card-title">Asia</h5>
-              <p class="card-text">A destination that is full of mountains.</p>
-              <input type="button" value="Reserve" data-toggle="modal" data-target="#r1" style="border:1px solid rgb(255, 255, 255);border-radius: 4px;background-color: rgb(5, 149, 168);padding: 5px;color: white;box-shadow: 0 0 6px rgb(255, 255, 255)">
-            </div>
-          </div>         
-          <div class="card text-white bg-secondary mb-3 text-center" id="cardd" style="border:0;border-radius:8px;box-shadow: 0 0 15px black;cursor: pointer;">
-            <img src="./im/destination-9.jpg" class="card-img-top" alt="...">
-            <div class="card-body" id="cardbody">
-              <h5 class="card-title">Greece</h5>
-              <p class="card-text">Where all the magic happens in Santorini.</p>
-              <input type="button" value="Reserve" data-toggle="modal" data-target="#r2" style="border:1px solid rgb(255, 255, 255);border-radius: 4px;background-color: rgb(5, 149, 168);padding: 5px;color: white;box-shadow: 0 0 6px rgb(255, 255, 255)">
-            </div>
-          </div>
-          <div class="card text-white bg-secondary mb-3 text-center"  id="cardd" style="border:0;border-radius:8px;box-shadow: 0 0 15px black;cursor: pointer;">
-            <img src="./im/destination-5-720x720.jpg" class="card-img-top" alt="...">
-            <div class="card-body" id="cardbody">
-              <h5 class="card-title">Bora Bora</h5>
-              <p class="card-text">A place for you trired soul.</p>
-              <input type="button" value="Reserve" data-toggle="modal" data-target="#r3" style="border:1px solid rgb(255, 255, 255);border-radius: 4px;background-color: rgb(5, 149, 168);padding: 5px;color: white;box-shadow: 0 0 6px rgb(255, 255, 255)">
-            </div>
-          </div>         
-          </div>           
-          </div>            
-      </section>
-      </div>
-      <!--LES CARDES 2-->
-      
-  <div class="container mt-3" style="display: none;" id="destination2">
-      <section>                
-          <div class="card-deck">          
-          <div class="card text-white bg-secondary mb-3 text-center" id="cardd" style="border:0;border-radius:8px;box-shadow: 0 0 15px black;cursor: pointer;">
-            <img src="./im/barce.jpg" class="card-img-top" alt="..." height="350px">
-            <div class="card-body" id="cardbody">
-              <h5 class="card-title">Barcelona</h5>
-              <p class="card-text">Where all the magic happens in.</p>
-              <input type="button" value="Reserve" data-toggle="modal" data-target="#r4" style="border:1px solid rgb(255, 255, 255);border-radius: 4px;background-color: rgb(5, 149, 168);padding: 5px;color: white;box-shadow: 0 0 6px rgb(255, 255, 255)">
-            </div>
-          </div>         
-          <div class="card text-white bg-secondary mb-3 text-center" id="cardd" style="border:0;border-radius:8px;box-shadow: 0 0 15px black;cursor: pointer;">
-            <img src="./im/newzi.jpg" class="card-img-top" alt="...">
-            <div class="card-body" id="cardbody">
-              <h5 class="card-title">New Zeland</h5>
-              <p class="card-text">Where all the magic happens in </p>
-              <input type="button" value="Reserve" data-toggle="modal" data-target="#r5" style="border:1px solid rgb(255, 255, 255);border-radius: 4px;background-color: rgb(5, 149, 168);padding: 5px;color: white;box-shadow: 0 0 6px rgb(255, 255, 255)">
-            </div>
-          </div>
-          <div class="card text-white bg-secondary mb-3 text-center" id="cardd" style="border:0;border-radius:8px;box-shadow: 0 0 15px black;cursor: pointer;">
-            <img src="./im/tok.jpg" class="card-img-top" alt="...">
-            <div class="card-body" id="cardbody">
-              <h5 class="card-title">Tokyo</h5>
-              <p class="card-text">Heaven in earth</p>
-              <input type="button" value="Reserve" data-toggle="modal" data-target="#r6" style="border:1px solid rgb(255, 255, 255);border-radius: 4px;background-color: rgb(5, 149, 168);padding: 5px;color: white;box-shadow: 0 0 6px rgb(255, 255, 255)">
-            </div>
-          </div>          
-          </div>           
-          </div>           
-      </section>     
-      </div>
-      <br>
-      <!-----popular destination-->
-      <div class="container-fluide p-4" style="display: none;background-image: url(./im/[Downloader.la]-61b3da928bb85.jpg);background-position: center;background-repeat: no-repeat;background-size: cover;" id="popular">
-        <div class="row w-100">
-          <div class="col-md-7 col-lg-7 col-sm-12 col-xs-12 p-5 text-white offset-md-3 offset-lg-3" style="background-color: rgba(0, 0, 0, 0.685);">
-            <div class="w-50 text-left" style="margin-left: 25%;">
-            <h2>Our Popular Tours</h2>            
-             <p style="font-size:x-large; font-family: 'Times New Roman', Times, serif;"> Africa</p>
-            <div class="progress"> 
-              <div class="progress-bar bg-info" style="width: 95%"></div>
-            </div>
-            <p style="font-size:x-large; font-family: 'Times New Roman', Times, serif;">Europe</p>
-            <div class="progress"> 
-              <div class="progress-bar bg-info" style="width: 88%"></div>
-            </div>
-            <p style="font-size:x-large; font-family: 'Times New Roman', Times, serif;">Asia</p>
-            <div class="progress"> 
-              <div class="progress-bar bg-info" style="width: 97%"></div>
-            </div>
-            <p style="font-size:x-large; font-family: 'Times New Roman', Times, serif;">America</p>
-            <div class="progress"> 
-              <div class="progress-bar bg-info" style="width: 90%"></div>
-            </div>
-          </div>           
-          </div>
-        </div>
-      </div>
-      <br>
-      <br>
-      <br>
-      <!-----end popular destination-->
-      <!--clients feedback-->
-      <br>
-<div class="w-100 p-4" style="display: none;" id="feed" >
-  <h2 class="text-center" id="place">What Customers Say</h2>
-  <hr style="width: 350px;height: 5px;border-radius: 8px;border: 0;background-color:rgb(5, 149, 168);" id="hr2">
-<br>
-<div class="container mt-3 w-100" >
-    <section>            
-        <div class="card-deck w-100 h-50" >          
-        <div class="card text-white bg-secondary mb-4 text-center" style="border: 0;box-shadow: 0 0 15px black;border-radius: 100%;">
-          <img src="./im/cli0.jpg" class="card-img-top" alt="..." style="border-radius: 100%;cursor: pointer;" data-toggle="modal" data-target="#Louiss" id="x">
-        </div>       
-        <div class="card text-white bg-secondary mb-4 text-center" style="border: 0;box-shadow: 0 0 15px black;border-radius: 100%;">
-          <img src="./im/Erin.jpg" class="card-img-top" alt="..." style="border-radius: 100%;cursor: pointer;" data-toggle="modal" data-target="#Sofia" id="x">
-        </div>
-        <div class="card text-white bg-secondary mb-4 text-center" style="border: 0;box-shadow: 0 0 15px black;border-radius: 100%;" data-toggle="modal" data-target="#Jack" id="x">
-          <img src="./im/josh-cary.jpg" class="card-img-top" alt="..." style="border-radius: 100%;cursor: pointer;">
-        </div>
-        <div class="card text-white bg-secondary mb-4 text-center" style="border: 0;box-shadow: 0 0 15px black;border-radius: 100%;" data-toggle="modal" data-target="#Harry" id="x">
-          <img src="./im/andrew-ryan_101.jpg" class="card-img-top" alt="..." style="border-radius: 100%;cursor: pointer;">
-        </div>
-        <div class="card text-white bg-secondary mb-4 text-center" style="border: 0;box-shadow: 0 0 15px black;border-radius: 100%;" data-toggle="modal" data-target="#Hanna" id="x">
-          <img src="./im/Salt-Spring-Dina-Ottoni-Battistessa.jpg" class="card-img-top" alt="..." style="border-radius: 100%;cursor: pointer;">
-        </div>       
-        </div>        
-        </div>    
-    </section>
-  </div>
-  <!--reservation-->
-  <div class="container-fluide p-4 bg-info" style="display: none;height: 410px;" id="reservation">
-              <div class="row w-100">
-                <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10 bg-light offset-md-1 offset-lg-1 offset-sm-1 offset-xs-1" style="margin-top: 9%;box-shadow: 0 0 15px black;">
-                  <div class="container-fluide bg-light">
-                    <div class="row bg-light">
-                      <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5 bg-light p-4 mt-4 text-left offset-md-1 offset-lg-1" >
-                        <br>
-                        <br>
-                        <br>
-                        <h4 style="color: rgb(5, 149, 168);letter-spacing: 5px;font-weight: bold;">Enjoy With  Us</h4>
-                        <hr style="background-color: rgb(5, 149, 168);;height: 2px;border: 0;border-radius: 8px;width: 100px;" align="left">
-                        <br>
-                        <p>"Vacation packages are offered as well, giving you the opportunity to bundle two or more options for greater overall savings."</p>
-                        <br>
-                        <div style="display: flex;justify-content: center;">
-                          <div class="text-center" style="padding-left: 6%;" >
-                            <img src="./im/icon-around.png" >
-                            <br>
-                            <h6 style="color: rgb(5, 149, 168);;font-weight: bold;">By Flight</h6>
-                          </div>
-                          <div class="text-center" style="padding-left: 6%;">
-                            <img src="./im/icon-boat.png">
-                            <br>
-                            <h6 style="color: rgb(5, 149, 168);font-weight: bold;;">By Boats</h6>
-                          </div>
-                          <div class="text-center" style="padding-left: 6%;">
-                            <img src="./im/icon-landmark.png">
-                            <br>
-                            <h6 style="color: rgb(5, 149, 168);font-weight: bold;;">Monements</h6>
-                          </div>                      
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 mb-4" >
+                  <br>
+                  <div style="display:none;width: 80%;background-color: rgb(0, 0, 0);box-shadow: 0 0 15px black;" class="mx-auto text-left p-5 text-white" id="formu">
+                      <h3 style="color: rgb(5, 149, 168);letter-spacing: 5px;font-weight: bold;">Reserve Now!</h3>
+                      <hr style="background-color: rgb(5, 149, 168);height: 2px;border: 0;border-radius: 8px;width: 100px;" align="left">
+                      <form>
+                        <div class="form-group">
+                          <label>Full Name</label>
+                          <input type="text" class="form-control" id="exampleInputtext1"  placeholder="Enter Your Name">
                         </div>
+                        <div class="form-group">
+                          <label>Email address</label>
+                          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                          <small id="emailHelp" class="form-text text-light">We'll never share your email with anyone else.</small>
+                        </div>                  
+                        <div class="form-group">
+                          <label >Select your Destination</label>
+                          <select class="form-control" id="exampleFormControlSelect1">
+                            <option>Germany</option>
+                            <option>Morocco</option>
+                            <option>Egypt</option>
+                            <option>France</option>
+                            <option>Newslanda</option>
+                          </select>
                       </div>
-                      <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 mb-4" >
-                        <br>
-                        <div style="display:none;width: 80%;background-color: rgb(255, 255, 255);box-shadow: 0 0 15px black;" class="mx-auto text-left p-4" id="formu">
-                            <h3 style="color: rgb(5, 149, 168);letter-spacing: 5px;font-weight: bold;">Reserve Now!</h3>
-                            <hr style="background-color: rgb(5, 149, 168);height: 2px;border: 0;border-radius: 8px;width: 100px;" align="left">
-                            <form>
-                              <div class="form-group">
-                                <label>Full Name</label>
-                                <input type="text" class="form-control" id="exampleInputtext1"  placeholder="Enter Your Name">
-                              </div>
-                              <div class="form-group">
-                                <label>Email address</label>
-                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-                                <small id="emailHelp" class="form-text text-dark">We'll never share your email with anyone else.</small>
-                              </div>                  
-                              <div class="form-group">
-                                <label >Select your Destination</label>
-                                <select class="form-control" id="exampleFormControlSelect1">
-                                  <option>Germany</option>
-                                  <option>Morocco</option>
-                                  <option>Egypt</option>
-                                  <option>France</option>
-                                  <option>Newslanda</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                              <label>Date Of Vacation</label>
-                              <input type="date" class="form-control" id="exampleInputdate" >
-                            </div>
-                                <div class="form-check form-check-inline">
-                                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                                  <label class="form-check-label" for="inlineRadio1">Male</label>
-                                </div>
-                                <div class="form-check form-check-inline">
-                                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                                  <label class="form-check-label" for="inlineRadio2">Female</label>
-                                </div>
-                                <br>
-                                <br>
-                                <button type="submit" class="btn btn-primary" style="background-color: rgb(5, 149, 168);border-color: white;margin-left: 50%;">Send</button>                              
-                          </form>
-                        </div>
+                      <div class="form-group">
+                        <label>Date Of Vacation</label>
+                        <input type="date" class="form-control" id="exampleInputdate" >
                       </div>
-                    </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                            <label class="form-check-label" for="inlineRadio1">Male</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                            <label class="form-check-label" for="inlineRadio2">Female</label>
+                          </div>
+                          <br>
+                          <br>
+                          <button type="submit" class="btn btn-primary" style="background-color: rgba(5, 149, 168, 0);border-color: white;">Send</button>                              
+                    </form>
                   </div>
                 </div>
               </div>
-  </div>
-  <div class="container-fluide" style="height: 760px;background-image: url(./im/1971537.jpg);background-position: center;background-repeat: no-repeat;background-size: cover;" id="im">.</div>
-  <!--footer-->
-  <div class="footer " id="foot"
-    style="background-image: url(./im/1971537.jpg);background-position: center;background-repeat: no-repeat;background-size: cover;">
-    <div class="container-fluide " style="background-color: rgba(0, 0, 0, 0.774);;">   
-      <div class="row w-100">
-        <div class="col-sm-6 col-md-3 items ">
-          <h3 style="color: rgb(5, 149, 168);margin-top:10%;">OPENING HOURS</h3>
-          <ul>
-            <li>
-              <a href="#" style="color: white;">MONDAY....9:00-22:00</a>
-            </li>
-            <li>
-              <a href="#" style="color: white;">TUESDAY....9:00-22:00</a>
-            </li>
-            <li>
-              <a href="#" style="color: white;">WEDNESDAY....9:00-22:00</a>
-            </li>
-            <li>
-              <a href="#" style="color: white;">THURSDAY....9:00-22:00</a>
-            </li>
-            <li>
-              <a href="#" style="color: white;">FRIDAY....9:00-22:00</a>
-            </li>
-            <li>
-              <a href="#" style="color: white;">SATURDAY....9:00-22:00</a>
-            </li>
-            <li>
-              <a href="#" style="color: white;">SUNDAY....9:00-22:00</a>
-            </li>
-          </ul>
+            </div>
+          </div>
         </div>
-        <div class="col-sm-6 col-md-3 items text-left">
-          <h3 style="color: rgb(5, 149, 168);margin-top:10%;">LOCATION</h3>
-          <ul>
-            <li>
-              <a href="#" style="color: white;">Location 1: <br>944 Clenholme Court Tiffin <br> OH 44883</a>
-            </li>
-            <li>
-              <a href="#" style="color: white;">Location 2: <br>921 Schoolhouse Court <br> New Bern, NC 28560</a>
-            </li>
-          </ul>
-        </div>
-        <div class="col-sm-6 col-md-3 items text-left">
-          <h3 style="color: rgb(5, 149, 168);margin-top:10%;">SITE INFORMATION</h3>
-          <ul>
-            <li>
-              <a href="#" style="color: white;">Accessibility</a>
-            </li>
-            <li>
-              <a href="#" style="color: white;">Terms and Conditions</a>
-            </li>
-            <li>
-              <a href="#" style="color: white;">Privacy notices</a>
-            </li>
-            <li>
-              <a href="#" style="color: white;">Cookie policy</a>
-            </li>
-            <li>
-              <a href="#" style="color: white;">Fraud and scam alert</a>
-            </li>
-            <li>
-              <a href="#" style="color: white;">Contact us</a>
-            </li>
-          </ul>
-        </div>
-        <div class="col-sm-6 col-md-3 items text-left">
-          <h3 style="color: rgb(5, 149, 168);margin-top:10%;" align="left">Travel Agency</h3>
-          <p style="color: white;" class="text-center">Traveling for me puts things into perspective. It allows me to
-            realize that there are far bigger things that my problems. So what if the wifi is slow or if my favorite ramen
-            place is closed. Traveling allows you to see that the world is not always about you. It allows me to see how
-            other people live and what they have to deal with on a daily basis.
-          </p>
-        </div> 
-        </div>   
     </div>
-    <div class="container-fluide text-center p-3" style="background-color: rgb(5, 149, 168);" id="ico">
-      <div class="row w-100 text-center">
-        <div class="col-sm-4 col-md-4 col-lg-4 items text-left text-center" id="d">
-          <br><br>
-          <i class="fa fa-facebook-square" style="font-size :25px; color: white;padding-left: 10px;cursor: pointer;"></i>
-          <i class="fa fa-instagram" style="font-size:25px;color: white;padding-left: 10px;cursor: pointer;"></i>
-          <i class="fa fa-pinterest" style="font-size:25px;color: white;padding-left: 10px;cursor: pointer;"></i>
-          <i class="fa fa-tripadvisor" style="font-size:25px;color: white;padding-left: 10px;cursor: pointer;"></i>
-          <i class="fa fa-twitter" style="font-size:25px;color: white;padding-left: 10px;cursor: pointer;"></i>
+     <!--clients feedback-->
+     <br>
+     <div class="w-100 p-4" id="feed"  style="display: none;" >
+       <h2 class="text-center" >What Customers Say</h2>
+       <hr style="width: 350px;height: 5px;border-radius: 8px;border: 0;background-color:rgb(5, 149, 168);" >
+     <br>
+     <div class="container mt-3 w-100 text-center" style="padding-left:15%;">
+         <section>            
+             <div class="card-deck w-75 h-50 text-center" >          
+             <div class="card text-white bg-secondary mb-4 text-center" style="border: 0;box-shadow: 0 0 15px black;border-radius: 100%;">
+               <img src="./im/cli0.jpg" class="card-img-top" alt="..." style="border-radius: 100%;cursor: pointer;" data-toggle="modal" data-target="#Louiss" id="x">
+             </div>       
+             <div class="card text-white bg-secondary mb-4 text-center" style="border: 0;box-shadow: 0 0 15px black;border-radius: 100%;">
+               <img src="./im/Erin.jpg" class="card-img-top" alt="..." style="border-radius: 100%;cursor: pointer;" data-toggle="modal" data-target="#Sofia" id="x">
+             </div>
+             <div class="card text-white bg-secondary mb-4 text-center" style="border: 0;box-shadow: 0 0 15px black;border-radius: 100%;" data-toggle="modal" data-target="#Jack" id="x">
+               <img src="./im/josh-cary.jpg" class="card-img-top" alt="..." style="border-radius: 100%;cursor: pointer;">
+             </div>
+             <div class="card text-white bg-secondary mb-4 text-center" style="border: 0;box-shadow: 0 0 15px black;border-radius: 100%;" data-toggle="modal" data-target="#Harry" id="x">
+               <img src="./im/andrew-ryan_101.jpg" class="card-img-top" alt="..." style="border-radius: 100%;cursor: pointer;">
+             </div>
+             <div class="card text-white bg-secondary mb-4 text-center" style="border: 0;box-shadow: 0 0 15px black;border-radius: 100%;" data-toggle="modal" data-target="#Hanna" id="x">
+               <img src="./im/Salt-Spring-Dina-Ottoni-Battistessa.jpg" class="card-img-top" alt="..." style="border-radius: 100%;cursor: pointer;">
+             </div>       
+             </div>        
+             </div>    
+         </section>
+       </div>
+    <!--footer-->
+    <div class="footer" id="foot">
+        <div class="container-fluide " style="background-color: rgba(0, 0, 0, 0.774);;">
+            <div class="row w-100">
+                <div class="col-sm-6 col-md-3 items offset-md-1">
+                    <h3 style="color: rgb(5, 149, 168);margin-top:10%;">OPENING HOURS</h3>
+                    <ul>
+                        <li>
+                            <a href="#" style="color: white;">MONDAY....9:00-22:00</a>
+                        </li>
+                        <li>
+                            <a href="#" style="color: white;">TUESDAY....9:00-22:00</a>
+                        </li>
+                        <li>
+                            <a href="#" style="color: white;">WEDNESDAY....9:00-22:00</a>
+                        </li>
+                        <li>
+                            <a href="#" style="color: white;">THURSDAY....9:00-22:00</a>
+                        </li>
+                        <li>
+                            <a href="#" style="color: white;">FRIDAY....9:00-22:00</a>
+                        </li>
+                        <li>
+                            <a href="#" style="color: white;">SATURDAY....9:00-22:00</a>
+                        </li>
+                        <li>
+                            <a href="#" style="color: white;">SUNDAY....9:00-22:00</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-sm-6 col-md-2 items text-left">
+                    <h3 style="color: rgb(5, 149, 168);margin-top:16%;">LOCATION</h3>
+                    <ul>
+                        <li>
+                            <a href="#" style="color: white;">Location 1: <br>944 Clenholme Court Tiffin <br> OH
+                                44883</a>
+                        </li>
+                        <li>
+                            <a href="#" style="color: white;">Location 2: <br>921 Schoolhouse Court <br> New Bern, NC
+                                28560</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-sm-6 col-md-3 items text-left">
+                    <h3 style="color: rgb(5, 149, 168);margin-top:10%;">SITE INFORMATION</h3>
+                    <ul>
+                        <li>
+                            <a href="#" style="color: white;">Accessibility</a>
+                        </li>
+                        <li>
+                            <a href="#" style="color: white;">Terms and Conditions</a>
+                        </li>
+                        <li>
+                            <a href="#" style="color: white;">Privacy notices</a>
+                        </li>
+                        <li>
+                            <a href="#" style="color: white;">Cookie policy</a>
+                        </li>
+                        <li>
+                            <a href="#" style="color: white;">Fraud and scam alert</a>
+                        </li>
+                        <li>
+                            <a href="#" style="color: white;">Contact us</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-sm-6 col-md-3 items text-left">
+                    <h3 style="color: rgb(5, 149, 168);margin-top:10%;">Travel Agency</h3>
+                    <p style="color: white;text-align:center;" class="text-center">Traveling for me puts things into
+                        perspective. It allows me to
+                        realize that there are far bigger things that my problems. So what if the wifi is slow or if my
+                        favorite ramen
+                        place is closed.
+                    </p>
+                </div>
+            </div>
         </div>
-        <div class="col-sm-4 col-md-4 col-lg-4 items text-center"><a href="https://www.instagram.com/ctrl_z_company/"><img src="./im/ctrl+z logo.png" style="width: 100px;height: 120px;cursor: pointer;display: none;" id="brand"></a></div>
-        <div class="col-sm-4 col-md-4 col-lg-4 items text-right">
-          <p style="color: white;text-align:right;"><br><br> © All The Right Have Been Reserve</p>
-        </div> 
-    </div>   
+        <div class="container-fluide text-center p-3" style="background-color: rgb(5, 149, 168);" id="ico">
+            <div class="row w-100 text-center">
+                <div class="col-sm-4 col-md-4 col-lg-4 items text-left text-center" id="d">
+                    <br><br>
+                    <i class="fa fa-facebook-square"
+                        style="font-size :25px; color: white;padding-left: 10px;cursor: pointer;"></i>
+                    <i class="fa fa-instagram"
+                        style="font-size:25px;color: white;padding-left: 10px;cursor: pointer;"></i>
+                    <i class="fa fa-pinterest"
+                        style="font-size:25px;color: white;padding-left: 10px;cursor: pointer;"></i>
+                    <i class="fa fa-tripadvisor"
+                        style="font-size:25px;color: white;padding-left: 10px;cursor: pointer;"></i>
+                    <i class="fa fa-twitter"
+                        style="font-size:25px;color: white;padding-left: 10px;cursor: pointer;"></i>
+                </div>
+                <div class="col-sm-4 col-md-4 col-lg-4 items text-center"><a
+                        href="https://www.instagram.com/ctrl_z_company/"><img src="./im/ctrl+z logo.png"
+                            style="width: 100px;height: 120px;cursor: pointer;display: none;" id="brand"></a></div>
+                <div class="col-sm-4 col-md-4 col-lg-4 items text-right">
+                    <p style="color: white;text-align:right;"><br><br> © All The Right Have Been Reserve</p>
+                </div>
+            </div>
+        </div>
+
+
+        <!--modal d reservation-->
+        <div class="modal fade" id="r1">
+            <div class="modal-dialog">
+                <div class="modal-content" style="background-color: rgb(255, 255, 255);box-shadow: 0 0 15px black;">
+                    <div class="modal-header">
+                        <h3 class="text-info">Asia</h3>
+                        <button class="close" data-dismiss="modal">
+                            <span>&times;</span>
+                        </button>
+                    </div>
+                    <iframe width="100%" height="300px" src="https://www.youtube.com/embed/TfPAEqZxTTY"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                    <div style="width: 100%;background-color: rgb(255, 255, 255);" class="mx-auto text-left p-4">
+                        <h5 class="modal-title text-center text-info">Reserve Now!</h5>
+                        <form>
+                            <div class="form-group">
+                                <label>Full Name</label>
+                                <input type="text" class="form-control" id="exampleInputtext1"
+                                    placeholder="Enter Your Name">
+                            </div>
+                            <div class="form-group">
+                                <label>Email address</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1"
+                                    aria-describedby="emailHelp" placeholder="Enter email">
+                                <small id="emailHelp" class="form-text text-dark">We'll never share your email with
+                                    anyone else.</small>
+                            </div>
+                            <div class="form-group">
+                                <label>Select your Country</label>
+                                <select class="form-control" id="exampleFormControlSelect1">
+                                    <option>Germany</option>
+                                    <option>Morocco</option>
+                                    <option>Egypt</option>
+                                    <option>France</option>
+                                    <option>Newslanda</option>
+                                </select>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
+                                    value="option1">
+                                <label class="form-check-label" for="inlineRadio1">Male</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
+                                    value="option2">
+                                <label class="form-check-label" for="inlineRadio2">Female</label>
+                            </div>
+                            <br>
+                            <br>
+                            <button type="submit" class="btn btn-primary"
+                                style="background-color: rgb(5, 149, 168);border-color: white;margin-left: 50%;">Send</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-   <!-- MODAL --->
+    </div>
+    </div>
+    </div>
+    <div class="modal fade" id="r2">
+        <div class="modal-dialog">
+            <div class="modal-content" style="background-color: rgb(255, 255, 255);box-shadow: 0 0 15px black;">
+                <div class="modal-header">
+                    <h3 class="text-info">Greece</h3>
+                    <button class="close" data-dismiss="modal">
+                        <span>&times;</span>
+                    </button>
+                </div>
+                <iframe width="100%" height="315" src="https://www.youtube.com/embed/C1WD79vnUR4"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                <div style="width: 100%;background-color: rgb(255, 255, 255);" class="mx-auto text-left p-4">
+                    <h5 class="modal-title text-center text-info">Reserve Now!</h5>
+                    <form>
+                        <div class="form-group">
+                            <label>Full Name</label>
+                            <input type="text" class="form-control" id="exampleInputtext1"
+                                placeholder="Enter Your Name">
+                        </div>
+                        <div class="form-group">
+                            <label>Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1"
+                                aria-describedby="emailHelp" placeholder="Enter email">
+                            <small id="emailHelp" class="form-text text-dark">We'll never share your email with anyone
+                                else.</small>
+                        </div>
+                        <div class="form-group">
+                            <label>Select your Country</label>
+                            <select class="form-control" id="exampleFormControlSelect1">
+                                <option>Germany</option>
+                                <option>Morocco</option>
+                                <option>Egypt</option>
+                                <option>France</option>
+                                <option>Newslanda</option>
+                            </select>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
+                                value="option1">
+                            <label class="form-check-label" for="inlineRadio1">Male</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
+                                value="option2">
+                            <label class="form-check-label" for="inlineRadio2">Female</label>
+                        </div>
+                        <br>
+                        <br>
+                        <button type="submit" class="btn btn-primary"
+                            style="background-color: rgb(5, 149, 168);border-color: white;margin-left: 50%;">Send</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    <div class="modal fade" id="r3">
+        <div class="modal-dialog">
+            <div class="modal-content" style="background-color: rgb(255, 255, 255);box-shadow: 0 0 15px black;">
+                <div class="modal-header">
+                    <h3 class="text-info">Bora Bora</h3>
+                    <button class="close" data-dismiss="modal">
+                        <span>&times;</span>
+                    </button>
+                </div>
+                <iframe width="100%" height="315" src="https://www.youtube.com/embed/g7WEYmVZLg4"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                <div style="width: 100%;background-color: rgb(255, 255, 255);" class="mx-auto text-left p-4">
+                    <h5 class="modal-title text-center text-info">Reserve Now!</h5>
+                    <form>
+                        <div class="form-group">
+                            <label>Full Name</label>
+                            <input type="text" class="form-control" id="exampleInputtext1"
+                                placeholder="Enter Your Name">
+                        </div>
+                        <div class="form-group">
+                            <label>Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1"
+                                aria-describedby="emailHelp" placeholder="Enter email">
+                            <small id="emailHelp" class="form-text text-dark">We'll never share your email with anyone
+                                else.</small>
+                        </div>
+                        <div class="form-group">
+                            <label>Select your Country</label>
+                            <select class="form-control" id="exampleFormControlSelect1">
+                                <option>Germany</option>
+                                <option>Morocco</option>
+                                <option>Egypt</option>
+                                <option>France</option>
+                                <option>Newslanda</option>
+                            </select>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
+                                value="option1">
+                            <label class="form-check-label" for="inlineRadio1">Male</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
+                                value="option2">
+                            <label class="form-check-label" for="inlineRadio2">Female</label>
+                        </div>
+                        <br>
+                        <br>
+                        <button type="submit" class="btn btn-primary"
+                            style="background-color: rgb(5, 149, 168);border-color: white;margin-left: 50%;">Send</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    <div class="modal fade" id="r4">
+        <div class="modal-dialog">
+            <div class="modal-content" style="background-color: rgb(255, 255, 255);box-shadow: 0 0 15px black;">
+                <div class="modal-header">
+                    <h3 class="text-info">Barcelona</h3>
+                    <button class="close" data-dismiss="modal">
+                        <span>&times;</span>
+                    </button>
+                </div>
+                <iframe width="100%" height="315" src="https://www.youtube.com/embed/1cq9mUblW_A"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                <div style="width: 100%;background-color: rgb(255, 255, 255);" class="mx-auto text-left p-4">
+                    <h5 class="modal-title text-center text-info">Reserve Now!</h5>
+                    <form>
+                        <div class="form-group">
+                            <label>Full Name</label>
+                            <input type="text" class="form-control" id="exampleInputtext1"
+                                placeholder="Enter Your Name">
+                        </div>
+                        <div class="form-group">
+                            <label>Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1"
+                                aria-describedby="emailHelp" placeholder="Enter email">
+                            <small id="emailHelp" class="form-text text-dark">We'll never share your email with anyone
+                                else.</small>
+                        </div>
+                        <div class="form-group">
+                            <label>Select your Country</label>
+                            <select class="form-control" id="exampleFormControlSelect1">
+                                <option>Germany</option>
+                                <option>Morocco</option>
+                                <option>Egypt</option>
+                                <option>France</option>
+                                <option>Newslanda</option>
+                            </select>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
+                                value="option1">
+                            <label class="form-check-label" for="inlineRadio1">Male</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
+                                value="option2">
+                            <label class="form-check-label" for="inlineRadio2">Female</label>
+                        </div>
+                        <br>
+                        <br>
+                        <button type="submit" class="btn btn-primary"
+                            style="background-color: rgb(5, 149, 168);border-color: white;margin-left: 50%;">Send</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    <div class="modal fade" id="r5">
+        <div class="modal-dialog">
+            <div class="modal-content" style="background-color: rgb(255, 255, 255);box-shadow: 0 0 15px black;">
+                <div class="modal-header">
+                    <h3 class="text-info">New Zealanda</h3>
+                    <button class="close" data-dismiss="modal">
+                        <span>&times;</span>
+                    </button>
+                </div>
+                <iframe width="100%" height="315" src="https://www.youtube.com/embed/rx7e3tZEZaw"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                <div style="width: 100%;background-color: rgb(255, 255, 255);" class="mx-auto text-left p-4">
+                    <h5 class="modal-title text-center text-info">Reserve Now!</h5>
+                    <form>
+                        <div class="form-group">
+                            <label>Full Name</label>
+                            <input type="text" class="form-control" id="exampleInputtext1"
+                                placeholder="Enter Your Name">
+                        </div>
+                        <div class="form-group">
+                            <label>Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1"
+                                aria-describedby="emailHelp" placeholder="Enter email">
+                            <small id="emailHelp" class="form-text text-dark">We'll never share your email with anyone
+                                else.</small>
+                        </div>
+                        <div class="form-group">
+                            <label>Select your Country</label>
+                            <select class="form-control" id="exampleFormControlSelect1">
+                                <option>Germany</option>
+                                <option>Morocco</option>
+                                <option>Egypt</option>
+                                <option>France</option>
+                                <option>Newslanda</option>
+                            </select>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
+                                value="option1">
+                            <label class="form-check-label" for="inlineRadio1">Male</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
+                                value="option2">
+                            <label class="form-check-label" for="inlineRadio2">Female</label>
+                        </div>
+                        <br>
+                        <br>
+                        <button type="submit" class="btn btn-primary"
+                            style="background-color: rgb(5, 149, 168);border-color: white;margin-left: 50%;">Send</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    <div class="modal fade" id="r6">
+        <div class="modal-dialog">
+            <div class="modal-content" style="background-color: rgb(255, 255, 255);box-shadow: 0 0 15px black;">
+                <div class="modal-header">
+                    <h3 class="text-info">Tokyo</h3>
+                    <br>
+                    <button class="close" data-dismiss="modal">
+                        <span>&times;</span>
+                    </button>
+                </div>
+                <iframe width="100%" height="315" src="https://www.youtube.com/embed/QcGmpWx4DXQ"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                <div style="width: 100%;background-color: rgb(255, 255, 255);" class="mx-auto text-left p-4">
+                    <h5 class="modal-title text-center text-info">Reserve Now!</h5>
+                    <form>
+                        <div class="form-group">
+                            <label>Full Name</label>
+                            <input type="text" class="form-control" id="exampleInputtext1"
+                                placeholder="Enter Your Name">
+                        </div>
+                        <div class="form-group">
+                            <label>Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1"
+                                aria-describedby="emailHelp" placeholder="Enter email">
+                            <small id="emailHelp" class="form-text text-dark">We'll never share your email with anyone
+                                else.</small>
+                        </div>
+                        <div class="form-group">
+                            <label>Select your Country</label>
+                            <select class="form-control" id="exampleFormControlSelect1">
+                                <option>Germany</option>
+                                <option>Morocco</option>
+                                <option>Egypt</option>
+                                <option>France</option>
+                                <option>Newslanda</option>
+                            </select>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
+                                value="option1">
+                            <label class="form-check-label" for="inlineRadio1">Male</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
+                                value="option2">
+                            <label class="form-check-label" for="inlineRadio2">Female</label>
+                        </div>
+                        <br>
+                        <br>
+                        <button type="submit" class="btn btn-primary"
+                            style="background-color: rgb(5, 149, 168);border-color: white;margin-left: 50%;">Send</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    <!-- MODAL --->
    <div class="modal fade" id="Louiss">
     <div class="modal-dialog" >
       <div class="modal-content" style="background-color: rgb(255, 255, 255);margin-top: 50%;box-shadow: 0 0 15px black;">
@@ -506,319 +846,6 @@
       </div>
     </div>
   </div>
-  <!--modal d reservation-->
-  <div class="modal fade" id="r1">
-    <div class="modal-dialog" >
-      <div class="modal-content" style="background-color: rgb(255, 255, 255);box-shadow: 0 0 15px black;">
-        <div class="modal-header">
-          <h3 class="text-info">Asia</h3>
-          <button class="close" data-dismiss="modal">
-            <span>&times;</span>
-          </button>
-        </div>
-        <iframe width="100%" height="300px" src="https://www.youtube.com/embed/TfPAEqZxTTY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                  <div style="width: 100%;background-color: rgb(255, 255, 255);" class="mx-auto text-left p-4">
-                    <h5 class="modal-title text-center text-info" >Reserve Now!</h5>
-                      <form>
-                        <div class="form-group">
-                          <label>Full Name</label>
-                          <input type="text" class="form-control" id="exampleInputtext1"  placeholder="Enter Your Name">
-                        </div>
-                        <div class="form-group">
-                          <label>Email address</label>
-                          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-                          <small id="emailHelp" class="form-text text-dark">We'll never share your email with anyone else.</small>
-                        </div>                  
-                        <div class="form-group">
-                          <label >Select your Country</label>
-                          <select class="form-control" id="exampleFormControlSelect1">
-                            <option>Germany</option>
-                            <option>Morocco</option>
-                            <option>Egypt</option>
-                            <option>France</option>
-                            <option>Newslanda</option>
-                          </select>
-                      </div>               
-                          <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                            <label class="form-check-label" for="inlineRadio1">Male</label>
-                          </div>
-                          <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                            <label class="form-check-label" for="inlineRadio2">Female</label>
-                          </div>
-                          <br>
-                          <br>
-                          <button type="submit" class="btn btn-primary" style="background-color: rgb(5, 149, 168);border-color: white;margin-left: 50%;">Send</button>                       
-                    </form>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-      </div>
-    </div>
-  </div>
-  <div class="modal fade" id="r2">
-    <div class="modal-dialog" >
-      <div class="modal-content" style="background-color: rgb(255, 255, 255);box-shadow: 0 0 15px black;">
-        <div class="modal-header">
-          <h3 class="text-info">Greece</h3>
-          <button class="close" data-dismiss="modal">
-            <span>&times;</span>
-          </button>
-        </div>
-        <iframe width="100%" height="315" src="https://www.youtube.com/embed/C1WD79vnUR4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                  <div style="width: 100%;background-color: rgb(255, 255, 255);" class="mx-auto text-left p-4">
-                    <h5 class="modal-title text-center text-info" >Reserve Now!</h5>
-                      <form>
-                        <div class="form-group">
-                          <label>Full Name</label>
-                          <input type="text" class="form-control" id="exampleInputtext1"  placeholder="Enter Your Name">
-                        </div>
-                        <div class="form-group">
-                          <label>Email address</label>
-                          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-                          <small id="emailHelp" class="form-text text-dark">We'll never share your email with anyone else.</small>
-                        </div>                  
-                        <div class="form-group">
-                          <label >Select your Country</label>
-                          <select class="form-control" id="exampleFormControlSelect1">
-                            <option>Germany</option>
-                            <option>Morocco</option>
-                            <option>Egypt</option>
-                            <option>France</option>
-                            <option>Newslanda</option>
-                          </select>
-                      </div>
-                          <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                            <label class="form-check-label" for="inlineRadio1">Male</label>
-                          </div>
-                          <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                            <label class="form-check-label" for="inlineRadio2">Female</label>
-                          </div>
-                          <br>
-                          <br>
-                          <button type="submit" class="btn btn-primary" style="background-color: rgb(5, 149, 168);border-color: white;margin-left: 50%;">Send</button>                     
-                    </form>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-      </div>
-    </div>
-  </div>
-  <div class="modal fade" id="r3">
-    <div class="modal-dialog" >
-      <div class="modal-content" style="background-color: rgb(255, 255, 255);box-shadow: 0 0 15px black;">
-        <div class="modal-header">
-          <h3 class="text-info">Bora Bora</h3>
-          <button class="close" data-dismiss="modal">
-            <span>&times;</span>
-          </button>
-        </div>
-        <iframe width="100%" height="315" src="https://www.youtube.com/embed/g7WEYmVZLg4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                  <div style="width: 100%;background-color: rgb(255, 255, 255);" class="mx-auto text-left p-4">
-                    <h5 class="modal-title text-center text-info" >Reserve Now!</h5>
-                      <form>
-                        <div class="form-group">
-                          <label>Full Name</label>
-                          <input type="text" class="form-control" id="exampleInputtext1"  placeholder="Enter Your Name">
-                        </div>
-                        <div class="form-group">
-                          <label>Email address</label>
-                          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-                          <small id="emailHelp" class="form-text text-dark">We'll never share your email with anyone else.</small>
-                        </div>                  
-                        <div class="form-group">
-                          <label >Select your Country</label>
-                          <select class="form-control" id="exampleFormControlSelect1">
-                            <option>Germany</option>
-                            <option>Morocco</option>
-                            <option>Egypt</option>
-                            <option>France</option>
-                            <option>Newslanda</option>
-                          </select>
-                      </div>                    
-                          <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                            <label class="form-check-label" for="inlineRadio1">Male</label>
-                          </div>
-                          <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                            <label class="form-check-label" for="inlineRadio2">Female</label>
-                          </div>
-                          <br>
-                          <br>
-                          <button type="submit" class="btn btn-primary" style="background-color: rgb(5, 149, 168);border-color: white;margin-left: 50%;">Send</button>                   
-                    </form>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-      </div>
-    </div>
-  </div>
-  <div class="modal fade" id="r4">
-    <div class="modal-dialog" >
-      <div class="modal-content" style="background-color: rgb(255, 255, 255);box-shadow: 0 0 15px black;">
-        <div class="modal-header">
-          <h3 class="text-info">Barcelona</h3>
-          <button class="close" data-dismiss="modal">
-            <span>&times;</span>
-          </button>
-        </div>
-        <iframe width="100%" height="315" src="https://www.youtube.com/embed/1cq9mUblW_A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                  <div style="width: 100%;background-color: rgb(255, 255, 255);" class="mx-auto text-left p-4">
-                    <h5 class="modal-title text-center text-info" >Reserve Now!</h5>
-                      <form>
-                        <div class="form-group">
-                          <label>Full Name</label>
-                          <input type="text" class="form-control" id="exampleInputtext1"  placeholder="Enter Your Name">
-                        </div>
-                        <div class="form-group">
-                          <label>Email address</label>
-                          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-                          <small id="emailHelp" class="form-text text-dark">We'll never share your email with anyone else.</small>
-                        </div>                  
-                        <div class="form-group">
-                          <label >Select your Country</label>
-                          <select class="form-control" id="exampleFormControlSelect1">
-                            <option>Germany</option>
-                            <option>Morocco</option>
-                            <option>Egypt</option>
-                            <option>France</option>
-                            <option>Newslanda</option>
-                          </select>
-                      </div>                   
-                          <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                            <label class="form-check-label" for="inlineRadio1">Male</label>
-                          </div>
-                          <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                            <label class="form-check-label" for="inlineRadio2">Female</label>
-                          </div>
-                          <br>
-                          <br>
-                          <button type="submit" class="btn btn-primary" style="background-color: rgb(5, 149, 168);border-color: white;margin-left: 50%;">Send</button>                  
-                    </form>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-      </div>
-    </div>
-  </div>
-  <div class="modal fade" id="r5">
-    <div class="modal-dialog" >
-      <div class="modal-content" style="background-color: rgb(255, 255, 255);box-shadow: 0 0 15px black;">
-        <div class="modal-header">
-          <h3 class="text-info">New Zealanda</h3>
-          <button class="close" data-dismiss="modal">
-            <span>&times;</span>
-          </button>
-        </div>
-        <iframe width="100%" height="315" src="https://www.youtube.com/embed/rx7e3tZEZaw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                  <div style="width: 100%;background-color: rgb(255, 255, 255);" class="mx-auto text-left p-4">
-                    <h5 class="modal-title text-center text-info" >Reserve Now!</h5>
-                      <form>
-                        <div class="form-group">
-                          <label>Full Name</label>
-                          <input type="text" class="form-control" id="exampleInputtext1"  placeholder="Enter Your Name">
-                        </div>
-                        <div class="form-group">
-                          <label>Email address</label>
-                          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-                          <small id="emailHelp" class="form-text text-dark">We'll never share your email with anyone else.</small>
-                        </div>                  
-                        <div class="form-group">
-                          <label >Select your Country</label>
-                          <select class="form-control" id="exampleFormControlSelect1">
-                            <option>Germany</option>
-                            <option>Morocco</option>
-                            <option>Egypt</option>
-                            <option>France</option>
-                            <option>Newslanda</option>
-                          </select>
-                      </div>
-                          <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                            <label class="form-check-label" for="inlineRadio1">Male</label>
-                          </div>
-                          <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                            <label class="form-check-label" for="inlineRadio2">Female</label>
-                          </div>
-                          <br>
-                          <br>
-                          <button type="submit" class="btn btn-primary" style="background-color: rgb(5, 149, 168);border-color: white;margin-left: 50%;">Send</button>               
-                    </form>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-      </div>
-    </div>
-  </div>
-  <div class="modal fade" id="r6">
-    <div class="modal-dialog" >
-      <div class="modal-content" style="background-color: rgb(255, 255, 255);box-shadow: 0 0 15px black;">
-        <div class="modal-header">
-          <h3 class="text-info">Tokyo</h3>
-          <br>
-          <button class="close" data-dismiss="modal">
-            <span>&times;</span>
-          </button>
-        </div>
-        <iframe width="100%" height="315" src="https://www.youtube.com/embed/QcGmpWx4DXQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                  <div style="width: 100%;background-color: rgb(255, 255, 255);" class="mx-auto text-left p-4">
-                    <h5 class="modal-title text-center text-info" >Reserve Now!</h5>
-                      <form>
-                        <div class="form-group">
-                          <label>Full Name</label>
-                          <input type="text" class="form-control" id="exampleInputtext1"  placeholder="Enter Your Name">
-                        </div>
-                        <div class="form-group">
-                          <label>Email address</label>
-                          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-                          <small id="emailHelp" class="form-text text-dark">We'll never share your email with anyone else.</small>
-                        </div>                  
-                        <div class="form-group">
-                          <label >Select your Country</label>
-                          <select class="form-control" id="exampleFormControlSelect1">
-                            <option>Germany</option>
-                            <option>Morocco</option>
-                            <option>Egypt</option>
-                            <option>France</option>
-                            <option>Newslanda</option>
-                          </select>
-                      </div>
-                          <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                            <label class="form-check-label" for="inlineRadio1">Male</label>
-                          </div>
-                          <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                            <label class="form-check-label" for="inlineRadio2">Female</label>
-                          </div>
-                          <br>
-                          <br>
-                          <button type="submit" class="btn btn-primary" style="background-color: rgb(5, 149, 168);border-color: white;margin-left: 50%;">Send</button>                   
-                    </form>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-      </div>
-    </div>
-  </div>
 </body>
+
 </html>
